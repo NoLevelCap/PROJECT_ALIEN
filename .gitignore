@@ -39,12 +39,16 @@ $RECYCLE.BIN/
 .Trashes
 .VolumeIcon.icns
 
+Assembly-CSharp.csproj
+PROJECT_ALIEN.sln
+PROJECT_ALIEN.userprefs
+
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
-Temp/
-Library/
-obj/
+/Temp
+/Library
+/obj
