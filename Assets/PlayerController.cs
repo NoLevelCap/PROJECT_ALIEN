@@ -35,18 +35,22 @@ public class PlayerController : MonoBehaviour {
 
 	private void CalculateMovement(){
 		if(Input.GetKey(KeyCode.A)){
-			transform.Translate (_Speed * Time.deltaTime, 0, 0);
+			//transform.Translate (_Speed * Time.deltaTime, 0, 0);
+			transform.localPosition -= new Vector3(_Speed * Time.deltaTime, 0, 0);
 		}
 		if(Input.GetKey(KeyCode.D)){
-			transform.Translate(_Speed*Time.deltaTime, 0, 0);
+			//transform.Translate(_Speed*Time.deltaTime, 0, 0);
+			transform.localPosition += new Vector3(_Speed * Time.deltaTime, 0, 0);
 		}
 		if(Input.GetKey(KeyCode.W)){
 			if (!MouseBounds.Contains (transform.position)) {
-				transform.Translate(0, _Speed*Time.deltaTime, 0);
+				//transform.Translate(0, _Speed*Time.deltaTime, 0);
 			}
+			transform.localPosition += new Vector3(0, _Speed*Time.deltaTime, 0);
 		}
 		if(Input.GetKey(KeyCode.S)){
-			transform.Translate(0, -_Speed*Time.deltaTime, 0);
+			//transform.Translate(0, -_Speed*Time.deltaTime, 0);
+			transform.localPosition -= new Vector3(0, _Speed*Time.deltaTime, 0);
 		}
 	}
 }
